@@ -48,31 +48,30 @@
                             <td style="width: 150px">{{$ds->NamHoc}}</td>
                             <td  style="width: 160px">{{$ds->NgayLapPhieu}}</td>
                                  @if($ds->TrangThai==0)
-                                 <td style="text-align: center;"><span    style="background-color: #ba60c9;width: auto;height: auto"class="badge badge-pill badge-primary">Chờ báo giá </span></td>
+                                     <td style="text-align: center;"><span    style="background-color: #ba60c9;width: auto;height: auto"class="badge badge-pill badge-primary">Chờ báo giá </span></td>
                                  @elseif($ds->TrangThai==1)
-                                 <td style="text-align: center;"><span    style="background-color: #cd9513;width: auto;height: auto"class="badge badge-pill badge-warning">Chờ lãnh đạo phòng  <br>quản trị duyệt</span></td>
+                                     <td style="text-align: center;"><span    style="background-color: #cd9513;width: auto;height: auto"class="badge badge-pill badge-warning">Chờ lãnh đạo phòng  <br>quản trị duyệt</span></td>
                                  @elseif($ds->TrangThai==2)
-                                 <td style="text-align: center;"><span    style="width: auto;height: auto"class="badge badge-pill badge-warning">Chờ ban giám<br> hiệu duyệt</span></td>
+                                     <td style="text-align: center;"><span    style="width: auto;height: auto"class="badge badge-pill badge-warning">Chờ ban giám<br> hiệu duyệt</span></td>
                                  @elseif($ds->TrangThai==3)
-                                 <td style="text-align: center;"><span    style="width: auto;height: auto"class="badge badge-pill badge-success">Đã duyệt</span></td>
+                                     <td style="text-align: center;"><span    style="width: auto;height: auto"class="badge badge-pill badge-success">Đã duyệt</span></td>
                                  @elseif($ds->TrangThai==5)
-                                 <td style="text-align: center;"><span   style="background-color: #7ec960;width: auto;height: auto" class="badge badge-pill badge-info">Chờ thêm vật tư</span></td>
+                                     <td style="text-align: center;"><span   style="background-color: #7ec960;width: auto;height: auto" class="badge badge-pill badge-info">Chờ thêm vật tư</span></td>
                                  @elseif($ds->TrangThai==6)
-                                 <td style="text-align: center;"><span   style="background-color: #b0afab;width: auto;height: auto" class="badge badge-pill badge-warning">Chờ nhân viên<br> quản lý kho duyệt</span></td>
+                                     <td style="text-align: center;"><span   style="background-color: #b0afab;width: auto;height: auto" class="badge badge-pill badge-warning">Chờ nhân viên<br> quản lý kho duyệt</span></td>
                                  @elseif($ds->TrangThai==7 || $ds->TrangThai==9 || $ds->TrangThai==4)
-                                 <td style="text-align: center;"><span  style="width: auto;height: auto"class="badge badge-pill badge-danger">Không duyệt phiếu</span></td>
+                                     <td style="text-align: center;"><span  style="width: auto;height: auto"class="badge badge-pill badge-danger">Không duyệt phiếu</span></td>
                                  @elseif($ds->TrangThai==8)
-                                 <td style="text-align: center;"><span  style="width: auto;height: auto;background-color: #98979669" class="badge badge-pill badge-dark">Chờ lãnh đạo<br> đơn vị duyệt</span></td>
+                                     <td style="text-align: center;"><span  style="width: auto;height: auto;background-color: #98979669" class="badge badge-pill badge-dark">Chờ lãnh đạo<br> đơn vị duyệt</span></td>
 
                                  @elseif($ds->TrangThai==10)
-                                 <td style="text-align: center;"><span   style="background-color: #b7ab8a;width: auto;height: auto" class="badge badge-pill badge-dark">Chờ tổng hợp </span></td>
+                                     <td style="text-align: center;"><span   style="background-color: #b7ab8a;width: auto;height: auto" class="badge badge-pill badge-dark">Chờ tổng hợp </span></td>
                                  @endif
                                  @if($ds->TrangThai==3)
-                                <td>
-                                    <a class="ti-eye" href="{{url('report?id='.$ds->MaHD)}}">Report</a>
-                                </td>
-                                     @endif
-
+                                     <td>
+                                         <a class="ti-eye" href="{{url('report?id='.$ds->MaHD)}}">Report</a>
+                                     </td>
+                                 @endif
 
                             </tr>
                                 @endforeach

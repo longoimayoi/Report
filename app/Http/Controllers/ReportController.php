@@ -38,6 +38,24 @@ class ReportController extends Controller
             ->where('hd.MaHD',$MaHD)
             ->get();
         $result = json_decode($phieu, true);
+        $item=array();
+        $item2=array();
+        $item3=array();
+        $item4=array();
+        $item5=array();
+        $item6=array();
+        $item7=array();
+        $item8=array();
+        $item9=array();
+        $item10=array();
+        $item11=array();
+        $item12=array();
+        $item13=array();
+        $item14=array();
+        $item15=array();
+        $item16=array();
+        $item17=array();
+
         foreach($vattu as $key=> $row)
         {
             $item[]=$row['TenVatTu'];
